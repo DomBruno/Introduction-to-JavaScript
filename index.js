@@ -1,24 +1,38 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
-
+const votingAge = 18;
+const age = 19;
+if (age > votingAge) {
+  console.log("True");
+} else {
+  console.log("False");
+}
 
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
-
+const voter = True;
+const votingAge = 18;
+const age = 19;
+if (age < votingAge) {
+    voter = False;
+    console.log('Too young to vote.')
+}
 
 
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
-
+console.log(Number("1999"));
 
 
 
 
 //Task d: Write a function to multiply a*b 
-
+function mult(a, b) {
+    return a * b;
+}
 
 
 
@@ -26,7 +40,9 @@
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
-
+function dogYears(age) {
+    return age * 7;
+}
 
 
 
@@ -48,7 +64,32 @@
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
+function dogFeeder(age, weight) {
+    if (age >= 1 && weight <= 5) {
+        return weight * .05;
+    } else if
+        (age >= 1 && weight >= 6 && weight <= 10) {
+        return weight * .04;
+    } else if
+        (age >= 1 && weight >= 11 && weight <= 15) {
+        return weight * .03;
+    } else if
+        (age >= 1 && weight > 15) {
+        return weight * .02
+    } else if
+        (age < 1 && age >= 0.583) {
+        return weight * .04;
+    } else if
+        (age < 0.583 && age >= 0.333) {
+        return weight * .05;
+    } else if
+        (age < 0.333) {
+        return weight * 0.1;
+    } else {
+        return 'Error in data input.'
+    }
+}
+
 
 
 
@@ -66,13 +107,21 @@
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
+const kmConverter = (km) => {
+    return km * 0.621371;
+}
 
+console.log(kmConverter(2));
 
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-  
+const footConverter = (feet) => {
+    return feet * 30.48;
+}
+
+console.log(footConverter(3));
 
 
 

@@ -130,8 +130,12 @@ console.log(footConverter(3));
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-  
-
+const annoyingSong = (number) => {
+    for (i = number; i > 0; i--) {
+        console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i - 1} bottles of soda on the wall`);
+    }
+}
+annoyingSong(10);
 
 
 
@@ -153,6 +157,17 @@ console.log(footConverter(3));
 // Hint - you may need to study tomorrow's traning kit on arrays 
 // try looking up the .includes() method
 
+ const vowels = ["a", "e", "i", "o", "u"];
+ function vowelCounter(text) {
+   let counter = 0;
+   for (let letter of text.toLowerCase()) {
+     if (vowels.includes(letter)) {
+       counter++;
+     }
+   }
+   return `The text contains ${counter} vowel(s)`;
+ }
+ console.log(vowelCounter("I am a world-class developer using iterations"));
 
 
 
@@ -161,7 +176,29 @@ console.log(footConverter(3));
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
 
-
+let userPrompt = prompt("Do you choose rock, paper, or scissors?");
+let computer = Math.random();
+if (computer <= 0.34) {
+  computer = "rock";
+} else if (computer <= 0.67) {
+  computer = "paper";
+} else if (computer > 0.67) {
+  computer = "scissors";
+}
+function game(user, computer) {
+  if (user === computer) {
+    return `It's a tie`;
+  } else if (user === "rock" && computer === "scissors") {
+    return `You win!`;
+  } else if (user === "paper" && computer === "rock") {
+    return `You win!`;
+  } else if (user === "scissors" && computer === "paper") {
+    return `You win!`;
+  } else {
+    return `You lose!`;
+  }
+}
+console.log(game(userPrompt, computer));
 
 
 

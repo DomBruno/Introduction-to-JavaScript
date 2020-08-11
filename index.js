@@ -100,7 +100,27 @@ function dogFeeder(age, weight) {
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
-
+let computer = Math.random();
+if (computer <= 0.34) {
+  computer = "rock";
+} else if (computer <= 0.67) {
+  computer = "paper";
+} else if (computer > 0.67) {
+  computer = "scissors";
+}
+function game(user, computer) {
+  if (user === computer) {
+    return `it's a tie`;
+  } else if (user === "rock" && computer === "scissors") {
+    return `you win!`;
+  } else if (user === "paper" && computer === "rock") {
+    return `you win!`;
+  } else if (user === "scissors" && computer === "paper") {
+    return `you win!`;
+  } else {
+    return `you lose!`;
+  }
+}
   
   
 
@@ -147,9 +167,26 @@ annoyingSong(10);
 //70s should be Cs 
 //60s should be D 
 //and anything below 60 should be F
-  
+const gradeCalc = (score) => {
+    if (score >= 90 && score <= 100)
+    { console.log('Your grade is an A.') }
+    else if
+        (score >= 80 && score < 90)
+    { console.log('Your grade is a B.') }
+    else if
+        (score >= 70 && score < 80)
+    { console.log('Your grade is a C.') }
+    else if
+        (score >= 60 && score < 70)
+    { console.log('Your grade is a D.') }
+    else if
+        (score >= 0 && score < 60)
+    { console.log('Your score is an F.') }
+    else
+        { console.log('Error in data input.')}
+    }
 
-  
+gradeCalc(72);
   
 
 /************************************************************** Stretch **************************************************************/
@@ -167,7 +204,7 @@ annoyingSong(10);
    }
    return `The text contains ${counter} vowel(s)`;
  }
- console.log(vowelCounter("I am a world-class developer using iterations"));
+ console.log(vowelCounter("Supercalifragilisticexpealidocious"));
 
 
 
